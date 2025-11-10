@@ -1,2 +1,0 @@
-ssh ok
-o ath einai gia ton peo
