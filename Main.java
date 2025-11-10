@@ -15,7 +15,7 @@ public class Main {
         int daneia = input.nextInt();
         System.out.print("Δώσε λοιπά έσοδα: ");
         int loipaEsoda = input.nextInt();
-        Esoda esoda = new Esoda(foroi, daneia, loipaEsoda);
+        Esoda esoda = new Esoda(foroi, daneia, loipaEsoda, tameio);
 
         // Εισαγωγή εξόδων
         System.out.print("Δώσε έξοδα για μισθούς: ");
