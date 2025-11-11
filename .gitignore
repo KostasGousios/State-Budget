@@ -1,1 +1,2 @@
-
+# Maven build directory
+target/
