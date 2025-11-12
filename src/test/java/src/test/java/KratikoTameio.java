@@ -1,3 +1,4 @@
+package src.test.java;
 public class KratikoTameio {
     private int tameio;
 
