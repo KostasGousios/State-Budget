@@ -39,5 +39,16 @@ public class Main {
         System.out.println("Νέο ποσό στο κρατικό ταμείο: " + tameio.getTameio());
 
         input.close();
+    
+    // ΔΙΑΧΕΙΡΗΣΗ ΜΕΝΟΥ ΕΠΙΛΟΓΩΝ enum 
+        System.out.println("διαλεξε μια απο τις παρακατω επιλογες");
+
+        for (MenuOptions option : MenuOptions.values()) {
+             System.out.println((option.ordinal() + 1) + "." + option.getDescription());
+        }
+        int choice = input.nextInt();
+
+        MenuOptions selectedOption = MenuOptions.values()[choice - 1];
+        System.out.println("επελεξες" + selectedOption.getDescription());
     }
-    }
+}
