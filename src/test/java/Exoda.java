@@ -1,4 +1,3 @@
-package src.test.java;
 public class Exoda {
     private int misthoi;
     private int syntakseis;
