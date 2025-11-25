@@ -1,5 +1,5 @@
 public class Exoda {
-    private int misthoi;
+      private int misthoi;
     private int syntakseis;
     private int loipa;
 

@@ -1,5 +1,5 @@
 public class KratikoTameio {
-    private int tameio;
+        private int tameio;
 
     public KratikoTameio(int arxikoPoso) {
         this.tameio = arxikoPoso;
