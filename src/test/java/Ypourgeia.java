@@ -1,5 +1,3 @@
-package src.test.java;
-
 public abstract class Ypourgeia {
     protected String onoma;
     public Ypourgeia(String onoma) {
@@ -10,4 +8,3 @@ public abstract class Ypourgeia {
     }
 } 
 // Εδω Μενου Επιλογων με επιλογες για ενεργειες που θα μπορει να εκτελεσει καθε υπουργειο 
-
