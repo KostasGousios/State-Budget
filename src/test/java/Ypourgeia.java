@@ -18,12 +18,12 @@ public abstract class Ypourgeia {
     }
     // Α) μεθοδος που ζηταει προυπολογισμο υπουργειου (1η επιλογη για τα υπουργεια στη main)
     public double eisagwgiProipologismou() {
-        System.out.println("Δώσε τον προϋπολογισμό σου: ");
+        System.out.println("Δώσε τον πρϋπολογισμό σου ");
         return s.nextDouble();
     }
     // Β) μεθοδοι για 2η επιλογη για τα υπουργεια στη main 
     private void eisagwgiPosostwn() {
-        System.out.println("Δώσε ποσοστό για:" + onoma);
+        System.out.println("Δώσε ποσοστό για " + onoma);
         double sum = 0;
         for (String log : logariasmoi.keySet()) { //επαναλαμβανεται για οσα κλειδια εχει ο Map
             System.out.print("Δώσε ποσοστό για" + log + "(σε %):");
