@@ -19,13 +19,14 @@ public class Main {
         if (choice == 2) {
              System.out.println("διαλεξε μια απο  τις παρακατω επιλογες");
 
-            for (MenouOPtionsforYpPaideias option : MenouOPtionsforYpPaideias.values()) {
-                 System.out.println((option.ordinal() + 1) + "." + option.getDescriptionYgeias());
+            for (MenouOptionsforYpPaideias option : MenouOptionsforYpPaideias.values()) {
+                 System.out.println((option.ordinal() + 1) + "." + option.getDescriptionPaideia());
             }
             int choice2 = input.nextInt();
 
-            MenouOPtionsforYpPaideias selectedOpt = MenouOPtionsforYpPaideias.values()[choice2-1];
-            System.out.println("επελεξες" + "." + selectedOpt.getDescriptionPaideias());
+            MenouOptionsforYpPaideias selectedOpt = MenouOptionsforYpPaideias.values()[choice2-1];
+            System.out.println("επελεξες" + "." + selectedOpt.getDescriptionPaideia());
+        }
 
         // ΔΙΑΧΕΙΡΙΣΗ ΜΕΝΟΥ ΕΠΙΛΟΓΩΝ ΓΙΑ ΥΠΟΥΡΓΕΙΟ ΥΓΕΙΑΣ 
         if (choice == 3) {
@@ -36,7 +37,7 @@ public class Main {
             }
             int choice3 = input.nextInt();
 
-            MenouOPtionsforYpYgeias selectedOptygeias  = MenouOPtionsforYpYgeias.values()[choice2-1];
+            MenouOPtionsforYpYgeias selectedOptygeias  = MenouOPtionsforYpYgeias.values()[choice3-1];
             System.out.println("επελεξες" + "." + selectedOptygeias.getDescriptionYgeias()); }
             
      // Αρχικό ποσό στο ταμείο
@@ -77,5 +78,4 @@ public class Main {
 
         input.close();
     }
-}
 }
