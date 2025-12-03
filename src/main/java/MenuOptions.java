@@ -8,7 +8,7 @@ public enum MenuOptions {
 
      private String description;
 
-     MenuOptions(String description){
+     MenuOptions(String description) {
         this.description = description;
      }
      public String getDescription() {

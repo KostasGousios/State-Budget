@@ -1,6 +1,3 @@
-package src.test.java;
-
-
 public class Esoda {
     private int foroi;
     private int daneia;
