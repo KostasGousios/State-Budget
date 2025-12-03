@@ -73,11 +73,10 @@ public class Main {
             int choice3 = input.nextInt();
 
             MenouOPtionsforYpYgeias selectedOptygeias  = MenouOPtionsforYpYgeias.values()[choice3-1];
-            System.out.println("επελεξες" + "." + selectedOptygeias.getDescriptionYgeias()); }
-            
+            System.out.println("επελεξες" + "." + selectedOptygeias.getDescriptionYgeias()); 
             YpourgeioYgeias.ygeia(choice3); //καλω την static μεθοδο που διαχειριζεται τισ επιλογες του Υπουργειου υγειας 
           }
-
+     }
 }
        
        
