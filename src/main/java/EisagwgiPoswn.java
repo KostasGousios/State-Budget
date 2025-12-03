@@ -7,7 +7,7 @@ public class EisagwgiPoswn {
     KratikoTameio tameio;
     int synolikaPragmatikaExoda = 0;
     int synolikaPragmatikaEsoda = 0;
-    public void provlepomena() {
+    public void provlepomena() { //καταγράφει τα προβλεπόμενα ποσά εσόδων/εξόδων στην αρχή του έτους
     // Αρχικό ποσό στο ταμείο
         System.out.print("Δώσε το αρχικό ποσό του κρατικού ταμείου από το προηγούμενο έτος: ");
         int arxikoPoso = input.nextInt();
@@ -45,7 +45,7 @@ public class EisagwgiPoswn {
         System.out.println("Διαφορά προβλεπόμενων εσόδων-εξόδων: " + diaforaprovl);
         System.out.println("Νέο ποσό στο κρατικό ταμείο: " + tameio.getTameio());
     }
-    public void pragmatika() {
+    public void pragmatika() { //καταγράφει πραγματικά ποσά εσόδων/εξόδων που έγιναν μέσα στο χρόνο 
         // ---------------//
 
         // ελεγχος μηπως δεν εχουν δηλωθει πρωτα τα προβλεπομενα
@@ -80,5 +80,8 @@ public class EisagwgiPoswn {
             System.out.println("Προβλεπόμενα έσοδα: " + esoda.getAthroismaEsodon());
             System.out.println("Πραγματικά έσοδα: " + synolikaPragmatikaEsoda);
         }
+    }
+    public void telika() {
+
     }
 }
