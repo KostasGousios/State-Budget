@@ -1,14 +1,14 @@
 public class Esoda {
     private int foroi;
     private int daneia;
-    private int loipa;
+    private int loipa_esoda;
     private int synolikaesoda;
 
-    public Esoda(int foroi, int daneia, int loipa, KratikoTameio tameio) {
+    public Esoda(int foroi, int daneia, int loipa_esoda, KratikoTameio tameio) {
         this.foroi = foroi;
         this.daneia = daneia;
-        this.loipa = loipa;
-        synolikaesoda = foroi + daneia + loipa;
+        this.loipa_esoda = loipa_esoda;
+        synolikaesoda = foroi + daneia + loipa_esoda;
         if (tameio.getTameio() > 0) {
             synolikaesoda += tameio.getTameio();
         }
@@ -19,6 +19,6 @@ public class Esoda {
     }
 
     public int getAthroismaEsodon() {
-        return foroi + daneia + loipa;
+        return foroi + daneia + loipa_esoda;
     }
 }

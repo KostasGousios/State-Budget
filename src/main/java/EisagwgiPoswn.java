@@ -8,7 +8,9 @@ public class EisagwgiPoswn {
     int synolikaPragmatikaExoda = 0;
     int synolikaPragmatikaEsoda = 0;
     public void provlepomena() { //καταγράφει τα προβλεπόμενα ποσά εσόδων/εξόδων στην αρχή του έτους
-    // Αρχικό ποσό στο ταμείο
+    
+        // Αρχικό ποσό στο ταμείο
+
         System.out.print("Δώσε το αρχικό ποσό του κρατικού ταμείου από το προηγούμενο έτος: ");
         int arxikoPoso = input.nextInt();
         tameio = new KratikoTameio(arxikoPoso);
@@ -46,9 +48,11 @@ public class EisagwgiPoswn {
         System.out.println("Νέο ποσό στο κρατικό ταμείο: " + tameio.getTameio());
     }
     public void pragmatika() { //καταγράφει πραγματικά ποσά εσόδων/εξόδων που έγιναν μέσα στο χρόνο 
+        
         // ---------------//
 
         // ελεγχος μηπως δεν εχουν δηλωθει πρωτα τα προβλεπομενα
+        
         if (esoda == null || exoda == null) {
             System.out.println("ΠΡΩΤΑ πρέπει να εισάγεις τα προβλεπόμενα ποσά!");
             return;
@@ -82,6 +86,62 @@ public class EisagwgiPoswn {
         }
     }
     public void telika() {
+        
+        // Έλεγχος ότι υπάρχουν προβλεπόμενα και πραγματικά
+        
+        if (esoda == null || exoda == null) {
+            System.out.println("ΠΡΩΤΑ πρέπει να εισάγεις τα προβλεπόμενα!");
+            return;
+        }
 
+        // Υπολογισμοί προβλεπόμενων
+        int provlepomenaEsoda = esoda.getAthroismaEsodon();
+        int provlepomenaExoda = exoda.getAthroismaExodon();
+        int diaforaProvlepomenwn = provlepomenaEsoda - provlepomenaExoda;
+
+        // Υπολογισμοί πραγματικών
+        int pragmatikaEsoda = synolikaPragmatikaEsoda;
+        int pragmatikaExoda = synolikaPragmatikaExoda;
+        int diaforaPragmatikon = pragmatikaEsoda - pragmatikaExoda;
+
+        // Εμφάνιση σύγκρισης
+        System.out.println("ΠΡΟΒΛΕΠΟΜΕΝΑ:");
+        System.out.println("Έσοδα: " + provlepomenaEsoda);
+        System.out.println("Έξοδα: " + provlepomenaExoda);
+        System.out.println("Διαφορά προβλεπόμενων: " + diaforaProvlepomenwn);
+
+        System.out.println("ΠΡΑΓΜΑΤΙΚΑ:");
+        System.out.println("Έσοδα: " + pragmatikaEsoda);
+        System.out.println("Έξοδα: " + pragmatikaExoda);
+        System.out.println("Διαφορά πραγματικών: " + diaforaPragmatikon);
+
+        // Σύγκριση πραγματικών με προβλεπόμενα
+        System.out.println("ΣΥΓΚΡΙΣΗ:");
+        System.out.println("Διαφορά πραγματικών - προβλεπόμενων σε απόλυτη τιμή : " +
+        (Math.abs(diaforaPragmatikon - diaforaProvlepomenwn)));
+
+    // Πλεόνασμα / Έλλειμμα με βάση τα πραγματικά ποσά
+   
+    if (diaforaPragmatikon > 0) {
+        System.out.println("Πραγματικό αποτέλεσμα(πραγματικών): ΠΛΕΟΝΑΣΜΑ (" + diaforaPragmatikon + ")");
+   
+    } else if (diaforaPragmatikon < 0) {
+        System.out.println("Πραγματικό αποτέλεσμα(πραγματικών): ΕΛΛΕΙΜΜΑ (" + diaforaPragmatikon + ")");
+   
+    } else {
+        System.out.println("Πραγματικό αποτέλεσμα(πραγματικών): ΙΣΟΖΥΓΙΣΜΕΝΟ");
+    }
+
+    //Πλεόνασμα / Έλλειμμα με βάση τα προβλεπόμενα (υποθετικά) ποσά 
+
+    if (diaforaProvlepomenwn > 0) {
+        System.out.println("Πραγματικό αποτέλεσμα(προβλεπόμενων): ΠΛΕΟΝΑΣΜΑ (" + diaforaProvlepomenwn + ")");
+   
+    } else if (diaforaProvlepomenwn < 0) {
+        System.out.println("Πραγματικό αποτέλεσμα(προβλεπόμενων): ΕΛΛΕΙΜΜΑ (" + diaforaProvlepomenwn + ")");
+   
+    } else {
+        System.out.println("Πραγματικό αποτέλεσμα(προβλεπόμενων): ΙΣΟΖΥΓΙΣΜΕΝΟ");
+    }
     }
 }
