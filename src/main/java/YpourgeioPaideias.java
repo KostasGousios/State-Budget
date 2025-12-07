@@ -1,5 +1,5 @@
 public class YpourgeioPaideias extends Ypourgeia {
-    public YpourgeioPaideias() {
+    private YpourgeioPaideias() {
         super("Υπουργείο Παιδείας");
     }
     @Override
@@ -11,15 +11,10 @@ public class YpourgeioPaideias extends Ypourgeia {
     public static YpourgeioPaideias objpaideias = new YpourgeioPaideias();
     public static paideia(int x) {
         if (x == 1) {
-            YpourgeioPaideias obj = new YpourgeioPaideias();
-            obj.eisagwgiProipologismou();
+           YpourgeioPaideias.objpaideias.eisagwgiProipologismou();
            Main.isYpourgeiaPrepared = true; // για exception σε enum προθυπουργου 
      }  else if (x==2) {
-            
-
-     }  else {
-
+           objpaideias.eisagwgiPosostwn();
      }
-        
-    }
-}  
+ } 
+} 

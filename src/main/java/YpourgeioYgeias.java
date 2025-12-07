@@ -1,5 +1,5 @@
 public class YpourgeioYgeias extends Ypourgeia {
-    public YpourgeioYgeias() {
+    private YpourgeioYgeias() {
         super("Υπουργείο Υγείας");
     }
     @Override
@@ -15,11 +15,7 @@ public class YpourgeioYgeias extends Ypourgeia {
         Main.isYpourgeiaPrepared = true; //για exception σε enum προθυπουργου    
         YpourgeioYgeias.objygeias.eisagwgiProipologismou();        
     } else if (x == 2) {
-        
-
-    } else {
-
+        objygeias.eisagwgiPosostwn();
     }
-
-    }
+}
 }

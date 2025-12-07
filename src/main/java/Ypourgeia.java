@@ -14,7 +14,7 @@ public abstract class Ypourgeia {
     public String getOnoma() {
         return onoma;
     }
-    private double zitoumeno;
+    protected double zitoumeno;
     // Α) μεθοδος που ζηταει προυπολογισμο υπουργειου (1η επιλογη για τα υπουργεια στη main)
     public double eisagwgiProipologismou() {
         System.out.println("Δώσε τον πρϋπολογισμό σου ");
@@ -22,7 +22,7 @@ public abstract class Ypourgeia {
     }
     // Β) μεθοδοι για 2η επιλογη για τα υπουργεια στη main 
     public void eisagwgiPosostwn() {
-        System.out.println("Δώσε ποσοστό για " + onoma);
+        System.out.println("Το ποσο που σας εδωσε ο προθυπουργος ειναι :" + this.proipologismosDedomena);
         double sum = 0;
         for (String log : logariasmoi.keySet()) { //επαναλαμβανεται για οσα κλειδια εχει ο Map
             System.out.print("Δώσε ποσοστό για" + log + "(σε %):");
@@ -34,21 +34,61 @@ public abstract class Ypourgeia {
             throw new IllegalArgumentException(
                 "Υπάρχει σφάλμα!: Τα ποσοστά που έχουν εισαχθεί δεν αθροίζουν στο 100%! Άθροισμα = " + sum + "%");
         }
+        if (this.proipologismosDedomena > 0) {
+        katanomiEsoterika();
+        } else {
+        System.out.println("\nΣημείωση: Δεν έχει εισαχθεί ακόμα προϋπολογισμός από τον Πρωθυπουργό. Η κατανομή θα γίνει αργότερα.");
+        }
     }
-    //μεθοδος που ζηταει απο πρωθυπουργο τον προυπολογισμο καθε υπουργειου
+    
+    protected double proipologismosDedomena = 0.0;
+    //μεθοδος στην οποια  πρωθυπουργος πραγματοποιει την δευτερη επιλογη του   
     public void katanomiProypApoProthypoyrgo() { 
         System.out.println("Το υπουργείο " + onoma + "έχει ζητήσει" + zitoumeno + "€" );
         System.out.println("\n Πόσα χρήματα θα δώσετε στο " + onoma + ";");
         double poso = s.nextDouble();
-         for (String log : logariasmoi.keySet()) { //επαναληψη για καθε λογαριασμο του υπουργειου μεσω του πινακα Map 
-            double katholikoPoso = poso * posostaKatanomis.get(log); // ποσο που τελικα παιρνει ο καθε λογαριασμος του καθε υπουργειου
-            logariasmoi.put(log, logariasmoi.get(log) + katholikoPoso);
-        }
-        // εμφανιση αποτελεσματων
-        for (String log : logariasmoi.keySet()) {
-            System.out.println(log + ": " + logariasmoi.get(log) + "€"); 
-        } // εμφανιζουμε για καθε υπουργειο το ονομα λογαριασμου και το υπολοιπο του σε ευρω
-    }
+        this.proipologismosDedomena = poso; 
+        
+        System.out.println("Δόθηκαν " + poso + "€ στο " + onoma + ".");
+       }
     public abstract void orismosLogariasmwn(); 
-    //καθε υπουργειο δηλωνει μονο τι λογαριασμους διαχειριζεται 
+    
+
+    protected void katanomiEsoterika() {
+       System.out.println("\n--- ΕΣΩΤΕΡΙΚΗ ΚΑΤΑΝΟΜΗ ΠΡΟΫΠΟΛΟΓΙΣΜΟΥ ---");
+       double diathesimoPoso = this.proipologismosDedomena;
+
+    // Επανάληψη για κάθε λογαριασμό χρησιμοποιώντας τα αποθηκευμένα ποσοστά
+       for (String log : logariasmoi.keySet()) {
+           double posostoKatanomis = posostaKatanomis.get(log);
+        
+        // Υπολογισμός του ποσού που παίρνει ο λογαριασμός
+           double katholikoPoso = diathesimoPoso * posostoKatanomis; 
+        
+        // Προσθήκη του ποσού στον λογαριασμό
+           logariasmoi.put(log, logariasmoi.get(log) + katholikoPoso);
+       }
+    
+    // Εμφάνιση αποτελεσμάτων
+       System.out.println("Εσωτερική κατανομή για το " + onoma + "(Συνολικό Ποσό: " + diathesimoPoso + "€):");
+       for (String log : logariasmoi.keySet()) {
+            System.out.println("-> " + log + ": " + logariasmoi.get(log) + "€");
+       }
+    }
 }
+
+
+
+ 
+
+       
+
+    
+   
+    
+    
+    
+    
+    
+    
+    

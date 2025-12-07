@@ -41,10 +41,9 @@ public class Main {
           if (isYpourgeiaPrepared == false) {
               throw new IllegalStateException("Δεν μπορείς να επιλέξεις 2 πριν γίνει η επιλογή 1 στα Υπουργεία!");
           } 
-            YpourgeioPaideias objpaideia = new YpourgeioPaideias();
-            objpaideia.katanomiProypApoProthypoyrgo();
-            YpourgeioYgeias objygeia = new YpourgeioYgeias();
-            objygeia.katanomiProypApoProthypoyrgo();
+          YpourgeioPaideias.objpaideias.katanomiProypApoProthypoyrgo(); // προθυπουργοσ βλεπει τι ζητησε το καθε υπουργειο
+          YpourgeioYgeias.objygeias.katanomiProypApoProthypoyrgo();  // και δινει τα ποσα που θελει 
+          
      } 
 }
        
