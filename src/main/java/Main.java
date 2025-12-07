@@ -1,11 +1,12 @@
 import java.util.Scanner;
 public class Main {
-
     public static boolean isYpourgeiaPrepared = false;
+    
+    
     public static void main(String[] args) {
                Scanner input = new Scanner(System.in); //Δημιουργία αντικειμένου για εισαγωγή αριθμών
-               
-        // ΔΙΑΧΕΙΡΗΣΗ ΜΕΝΟΥ ΕΠΙΛΟΓΩΝ enum 
+     
+               // ΔΙΑΧΕΙΡΗΣΗ ΜΕΝΟΥ ΕΠΙΛΟΓΩΝ enum 
         
         System.out.println("διαλεξε μια απο τις παρακατω επιλογες");
 
@@ -44,7 +45,7 @@ public class Main {
             objpaideia.katanomiProypApoProthypoyrgo();
             YpourgeioYgeias objygeia = new YpourgeioYgeias();
             objygeia.katanomiProypApoProthypoyrgo();
-     }
+     } 
 }
        
         // ΔΙΑΧΕΙΡΙΣΗ ΜΕΝΟΥ ΕΠΙΛΟΓΩΝ ΓΙΑ ΥΠΟΥΡΓΕΙΟ Παιδειας 
@@ -59,7 +60,7 @@ public class Main {
             MenouOptionsforYpPaideias selectedOpt = MenouOptionsforYpPaideias.values()[choice2-1];
             System.out.println("επελεξες" + "." + selectedOpt.getDescriptionPaideia());
          
-          YpourgeioPaideias.paideia(choice2);
+          YpourgeioPaideias.objpaideias.paideia(choice2);
         }
         
         
@@ -74,7 +75,7 @@ public class Main {
 
             MenouOPtionsforYpYgeias selectedOptygeias  = MenouOPtionsforYpYgeias.values()[choice3-1];
             System.out.println("επελεξες" + "." + selectedOptygeias.getDescriptionYgeias()); 
-            YpourgeioYgeias.ygeia(choice3); //καλω την static μεθοδο που διαχειριζεται τισ επιλογες του Υπουργειου υγειας 
+            YpourgeioYgeias.objygeias.ygeia(choice3); //καλω την static μεθοδο που διαχειριζεται τισ επιλογες του Υπουργειου υγειας 
           }
      }
 }

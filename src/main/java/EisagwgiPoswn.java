@@ -7,17 +7,10 @@ public class EisagwgiPoswn {
     KratikoTameio tameio;
     int synolikaPragmatikaExoda = 0;
     int synolikaPragmatikaEsoda = 0;
-<<<<<<< HEAD
-    public void provlepomena() { //καταγράφει τα προβλεπόμενα ποσά εσόδων/εξόδων στην αρχή του έτους
-    
-        // Αρχικό ποσό στο ταμείο
-
-=======
     
     public void provlepomena() {
    
         // Αρχικό ποσό στο ταμείο
->>>>>>> ed1ba1496183b289fe258fba87fdef867cbf29d9
         System.out.print("Δώσε το αρχικό ποσό του κρατικού ταμείου από το προηγούμενο έτος: ");
         int arxikoPoso = input.nextInt();
         tameio = new KratikoTameio(arxikoPoso);
