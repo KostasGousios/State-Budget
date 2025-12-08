@@ -13,11 +13,13 @@
         <maven.compiler.target>21</maven.compiler.target>
     </properties>
 
+    <dependencies>
     <dependency>
-    <groupId>mysql</groupId>
-    <artifactId>mysql-connector-j</artifactId>
-    <version>8.1.0</version>
+        <groupId>org.xerial</groupId>
+        <artifactId>sqlite-jdbc</artifactId>
+        <version>3.45.1.0</version>
     </dependency>
+    </dependencies>
 
     <build>
         <plugins>
