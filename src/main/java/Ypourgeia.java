@@ -17,15 +17,15 @@ public abstract class Ypourgeia {
     protected double zitoumeno;
     // Α) μεθοδος που ζηταει προυπολογισμο υπουργειου (1η επιλογη για τα υπουργεια στη main)
     public double eisagwgiProipologismou() {
-        System.out.println("Δώσε τον πρϋπολογισμό σου ");
+        System.out.println("Δώστε τον πρϋπολογισμό σας: ");
          return this.zitoumeno = s.nextDouble();
     }
     // Β) μεθοδοι για 2η επιλογη για τα υπουργεια στη main 
     public void eisagwgiPosostwn() {
-        System.out.println("Το ποσο που σας εδωσε ο προθυπουργος ειναι :" + this.proipologismosDedomena);
+        System.out.println("Το ποσο που σας δόθηκε από τον πρωθυπουργό είναι :" + this.proipologismosDedomena);
         double sum = 0;
         for (String log : logariasmoi.keySet()) { //επαναλαμβανεται για οσα κλειδια εχει ο Map
-            System.out.print("Δώσε ποσοστό για" + log + "(σε %):");
+            System.out.print("Δώστε ποσοστό για" + log + "(σε %):");
             double pososto = s.nextDouble();
             posostaKatanomis.put(log, pososto / 100.0);
             sum += pososto;
