@@ -1,2 +1,4 @@
 # Maven build directory
 target/
+*.db
+statebudget.db
