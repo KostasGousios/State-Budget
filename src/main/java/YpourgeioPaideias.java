@@ -9,7 +9,7 @@ public class YpourgeioPaideias extends Ypourgeia {
         logariasmoi.put("Ανώτατα Ιδρύματα", 0.0);
     }
     public static YpourgeioPaideias objpaideias = new YpourgeioPaideias();
-    public static paideia(int x) {
+    public static void paideia(int x) {
         if (x == 1) {
            YpourgeioPaideias.objpaideias.eisagwgiProipologismou();
            Main.isYpourgeiaPrepared = true; // για exception σε enum προθυπουργου 
