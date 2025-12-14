@@ -1,12 +1,19 @@
 import java.util.Scanner;
+import java.sql.SQLException;
 public class Main {
+     
     public static boolean isYpourgeiaPrepared = false;
     
-    
     public static void main(String[] args) {
-               Scanner input = new Scanner(System.in); //Δημιουργία αντικειμένου για εισαγωγή αριθμών
+     try {
+        Database.getConnection();  // Δημιουργεί τη βάση
+        System.out.println("Επιτυχής δημιουργία βάσης δεδομένων");
+     } catch (SQLException e) {
+        System.out.println("Σφάλμα: " + e.getMessage());
+     }
+          Scanner input = new Scanner(System.in); //Δημιουργία αντικειμένου για εισαγωγή αριθμών
      
-               // ΔΙΑΧΕΙΡΗΣΗ ΜΕΝΟΥ ΕΠΙΛΟΓΩΝ enum 
+           // ΔΙΑΧΕΙΡΗΣΗ ΜΕΝΟΥ ΕΠΙΛΟΓΩΝ enum 
         
         System.out.println("διαλεξε μια απο τις παρακατω επιλογες");
 
