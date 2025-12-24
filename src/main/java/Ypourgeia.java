@@ -1,11 +1,9 @@
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Scanner;
 
 public abstract class Ypourgeia {
     protected String onoma;
-    protected static final Scanner s = new Scanner(System.in);
     protected Map<String, Double> logariasmoi = new HashMap<>(); //κενος πινακας με λογαριασμους και ποσα
     protected Map<String, Double> posostaKatanomis = new HashMap<>(); //κενο πινακας με τα ποσοστα κατανομης που θα δωσει ο χρηστης
     public Ypourgeia(String onoma) {
@@ -18,7 +16,7 @@ public abstract class Ypourgeia {
     // Α) μεθοδος που ζηταει προυπολογισμο υπουργειου (1η επιλογη για τα υπουργεια στη main)
     public double eisagwgiProipologismou() {
         System.out.println("Δώστε τον πρϋπολογισμό σας: ");
-         return this.zitoumeno = s.nextDouble();
+         return this.zitoumeno = Main.readSafeDouble();
     }
     // Β) μεθοδοι για 2η επιλογη για τα υπουργεια στη main 
     public void eisagwgiPosostwn() {
@@ -26,7 +24,7 @@ public abstract class Ypourgeia {
         double sum = 0;
         for (String log : logariasmoi.keySet()) { //επαναλαμβανεται για οσα κλειδια εχει ο Map
             System.out.print("Δώστε ποσοστό για" + log + "(σε %):");
-            double pososto = s.nextDouble();
+            double pososto = Main.readSafeDouble();
             posostaKatanomis.put(log, pososto / 100.0);
             sum += pososto;
         }
@@ -46,7 +44,7 @@ public abstract class Ypourgeia {
     public void katanomiProypApoProthypoyrgo() { 
         System.out.println("Το υπουργείο " + onoma + "έχει ζητήσει" + zitoumeno + "€" );
         System.out.println("\n Πόσα χρήματα θα δώσετε στο " + onoma + ";");
-        double poso = s.nextDouble();
+        double poso = Main.readSafeDouble();
         this.proipologismosDedomena = poso; 
         
         System.out.println("Δόθηκαν " + poso + "€ στο " + onoma + ".");

@@ -1,7 +1,4 @@
-import java.util.Scanner;
-
 public class EisagwgiPoswn {
-    Scanner input = new Scanner(System.in);
     Esoda esoda;
     Exoda exoda;
     KratikoTameio tameio;
@@ -12,27 +9,27 @@ public class EisagwgiPoswn {
    
         // Αρχικό ποσό στο ταμείο
         System.out.print("Δώσε το αρχικό ποσό του κρατικού ταμείου από το προηγούμενο έτος: ");
-        int arxikoPoso = input.nextInt();
+        int arxikoPoso = Main.readSafeInt();
         tameio = new KratikoTameio(arxikoPoso);
 
         // Εισαγωγή εσόδων
         System.out.print("Δώσε προβλεπόμενα έσοδα από φόρους: ");
-        int foroi = input.nextInt();
+        int foroi = Main.readSafeInt();
         System.out.print("Δώσε προβλεπόμενα έσοδα από δάνεια: ");
-        int daneia = input.nextInt();
+        int daneia = Main.readSafeInt();
         System.out.print("Δώσε πρόβλεψη για λοιπά έσοδα: ");
-        int loipaEsoda = input.nextInt();
+        int loipaEsoda = Main.readSafeInt();
         esoda = new Esoda(foroi, daneia, loipaEsoda, tameio);
 
         // Εισαγωγή εξόδων
         System.out.print("Δώσε προβλεπόμενα έξοδα για μισθούς: ");
-        int misthoi = input.nextInt();
+        int misthoi = Main.readSafeInt();
         System.out.print("exodagiaypourgeia συντάξεις: ");
-        int syntakseis = input.nextInt();
+        int syntakseis = Main.readSafeInt();
         System.out.print("Δώσε πρόβλεψη για λοιπά έξοδα: ");
-        int loipaExoda = input.nextInt();
+        int loipaExoda = Main.readSafeInt();
         System.out.println("Δώσε προβλεπόμενα έξοδα για υπουργεία: ");
-        int exodagiaypourgeia = input.nextInt();
+        int exodagiaypourgeia = Main.readSafeInt();
         exoda = new Exoda(misthoi, syntakseis, loipaExoda, exodagiaypourgeia);
 
         // Υπολογισμός διαφοράς με χρήση μεθόδων get άλλων κλάσεων
@@ -60,7 +57,7 @@ public class EisagwgiPoswn {
 
         //Θες να βαλεις πραγματικο εξοδο που εγινε 
         System.out.print("Δώσε πραγματικό έξοδο που συνέβη μέσα στη χρονιά: ");
-        int pragmatikoExodo = input.nextInt();
+        int pragmatikoExodo = Main.readSafeInt();
         synolikaPragmatikaExoda += pragmatikoExodo;
 
         // ελεγχος να μην ξεπερναει το 90% των προβλεπομενων εξοδων
@@ -74,7 +71,7 @@ public class EisagwgiPoswn {
 
         //θες να βαλεις εσοδο που εγινε 
         System.out.print("Δώσε πραγματικό έσοδο που συνέβη μέσα στη χρονιά: ");
-        int pragmatikoEsodo = input.nextInt();
+        int pragmatikoEsodo = Main.readSafeInt();
         synolikaPragmatikaEsoda += pragmatikoEsodo;
 
         //ελεγχος να μην ξεπερναει το 90% των προβλεπομενων εσοδων
