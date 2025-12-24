@@ -40,9 +40,9 @@ public class Main {
          System.out.println("επελεξες" + "." + selectedChoice.getDescriptionProthipourgos());
         
          // διαχειριση επιλογων προθυπουργου 
+         EisagwgiPoswn obj1 = new EisagwgiPoswn();
          if (choiceProthipourgou == 1 ) {
-            EisagwgiPoswn obj1 = new EisagwgiPoswn();
-            obj1.provlepomena();
+              obj1.provlepomena();
      }  else if (choiceProthipourgou == 2) {
            // εξαιρεση - δεν μπορει ο προθυπουργοσ να πατησει 2 αν τα υπουργεια δεν πατησουν 1
           if (isYpourgeiaPrepared == false) {
@@ -51,7 +51,15 @@ public class Main {
           YpourgeioPaideias.objpaideias.katanomiProypApoProthypoyrgo(); // προθυπουργοσ βλεπει τι ζητησε το καθε υπουργειο
           YpourgeioYgeias.objygeias.katanomiProypApoProthypoyrgo();  // και δινει τα ποσα που θελει 
           
-     } 
+     }  else if (choiceProthipourgou == 3) {
+          System.out.println("--- Εισαγωγή Πραγματικών Εσόδων/Εξόδων ---");
+          obj1.pragmatika(); 
+          System.out.println("Η ενημέρωση των πραγματικών ποσών ολοκληρώθηκε.");
+     } else if (choiceProthipourgou == 4) {
+          System.out.println("Πραγματικά, προβλεπόμενα και είδος προυπολογισμού στο τέλος του έτους");
+          obj1.telika();
+     }
+     
 }
        
         // ΔΙΑΧΕΙΡΙΣΗ ΜΕΝΟΥ ΕΠΙΛΟΓΩΝ ΓΙΑ ΥΠΟΥΡΓΕΙΟ Παιδειας 
