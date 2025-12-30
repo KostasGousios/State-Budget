@@ -87,7 +87,10 @@ public class Main {
        }  else if (choiceProthipourgou == 4) {
           System.out.println("Πραγματικά, προβλεπόμενα και είδος προυπολογισμού στο τέλος του έτους");
           obj1.telika();
-       }
+       }  else if (choiceProthipourgou == 5) {
+          System.out.print("Σε περιπτωση πανδημιας το Υπ.Υγειας εχει μεγαλυτερο budget για να διαχειριστει την κριση");
+          senarioPandimia();
+        } 
      } catch (IllegalStateException e) {
           System.out.println("ΣΦΑΛΜΑ: " + e.getMessage());
           System.out.println("Παρακαλώ ακολουθήστε τη σωστή σειρά των ενεργειών.");
@@ -127,6 +130,29 @@ public class Main {
             YpourgeioYgeias.objygeias.ygeia(choice3); //καλω την static μεθοδο που διαχειριζεται τισ επιλογες του Υπουργειου υγειας 
           }
      }
+
+     //ΜΕΘΟΔΟΣ ΓΙΑ ΣΕΝΑΡΙΟ ΠΑΝΔΗΜΙΑΣ 
+     public static void senarioPandimia() {
+        System.out.println("--- ΕΝΕΡΓΟΠΟΙΗΣΗ ΣΕΝΑΡΙΟΥ ΠΑΝΔΗΜΙΑΣ ---");
+    
+        // Υπολογιζω του 50% του τρέχοντος ποσού της Παιδείας
+        double posoMetaphoras = YpourgeioPaideias.objpaideias.proipologismosDedomena * 0.5;
+    
+        // Αφαίρεση από την Παιδεία
+        YpourgeioPaideias.objpaideias.proipologismosDedomena -= posoMetaphoras;
+    
+        // Προσθήκη στην Υγεία
+        YpourgeioYgeias.objygeias.proipologismosDedomena += posoMetaphoras;
+    
+        System.out.println("Μεταφέρθηκαν " + posoMetaphoras + "€ από το Υπ. Παιδείας στο Υπ. Υγείας.");
+
+        // Πρέπει να μηδενίσουμε τους λογαριασμούς και να ξαναμοιράσουμε
+        YpourgeioPaideias.objpaideias.orismosLogariasmwn(); // Μηδενισμός
+        YpourgeioPaideias.objpaideias.katanomiEsoterika(); // Νέο μοίρασμα
+    
+        YpourgeioYgeias.objygeias.orismosLogariasmwn(); // Μηδενισμός
+        YpourgeioYgeias.objygeias.katanomiEsoterika(); // Νέο μοίρασμα
+    }
 }
        
        

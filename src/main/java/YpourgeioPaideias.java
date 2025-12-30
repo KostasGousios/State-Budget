@@ -1,5 +1,5 @@
 public class YpourgeioPaideias extends Ypourgeia {
-    private YpourgeioPaideias() {
+    private  YpourgeioPaideias() {
         super("Υπουργείο Παιδείας");
     }
     @Override

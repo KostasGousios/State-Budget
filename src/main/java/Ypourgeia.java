@@ -40,6 +40,7 @@ public abstract class Ypourgeia {
     }
     
     protected double proipologismosDedomena = 0.0;
+   
     //μεθοδος στην οποια  πρωθυπουργος πραγματοποιει την δευτερη επιλογη του   
     public void katanomiProypApoProthypoyrgo() { 
         System.out.println("Το υπουργείο " + onoma + "έχει ζητήσει" + zitoumeno + "€" );
@@ -49,6 +50,7 @@ public abstract class Ypourgeia {
         
         System.out.println("Δόθηκαν " + poso + "€ στο " + onoma + ".");
        }
+    
     public abstract void orismosLogariasmwn(); 
     
 
