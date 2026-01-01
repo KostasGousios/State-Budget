@@ -90,7 +90,10 @@ public class Main {
        }  else if (choiceProthipourgou == 5) {
           System.out.print("Σε περιπτωση πανδημιας το Υπ.Υγειας εχει μεγαλυτερο budget για να διαχειριστει την κριση");
           senarioPandimia();
-        } 
+        } else if (choiceProthipourgou == 6) {
+            System.out.println("Σε περίπτωση φυσικής καταστροφής η κυβέρνηση λαμβάνει περισσότερα λεφτά από τα αποθεματικά για καλύτερη διαχείριση");
+            FysikiKatastrofi.diacheirisi(obj1.tameio, obj1);
+        }
      } catch (IllegalStateException e) {
           System.out.println("ΣΦΑΛΜΑ: " + e.getMessage());
           System.out.println("Παρακαλώ ακολουθήστε τη σωστή σειρά των ενεργειών.");
