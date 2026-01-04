@@ -1,0 +1,399 @@
+/* ===== ΒΑΣΙΚΑ STYLES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    color: #1a202c;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 20px;
+    min-height: 100vh;
+}
+
+/* ===== HEADER ===== */
+.site-header {
+    padding: 3.5rem 1.5rem 3rem;
+    margin-bottom: 3rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 0 0 2rem 2rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.logo-area {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.logo-image {
+    height: 40px;
+    width: auto;
+    display: block;
+}
+
+.tool-description {
+    font-size: 18px;
+    color: #2c3e50;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* ===== MAIN CONTENT ===== */
+.main-content {
+    max-width: 1100px;
+    margin: 0 auto 2.5rem;
+    padding: 3rem 1.5rem 3rem;
+}
+
+/* ===== ΠΛΑΙΣΙΟ ΓΥΡΩ ΑΠΟ ΤΟ ABOUT-PLATFORM ===== */
+.info-frame-container {
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 25px;
+    background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+    border-radius: 15px;
+    box-shadow: 
+        0 10px 30px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    border: 2px solid rgba(102, 126, 234, 0.3);
+}
+
+.info-frame {
+    position: relative;
+    padding: 5px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 
+        0 4px 6px rgba(0, 0, 0, 0.05),
+        inset 0 0 0 1px rgba(102, 126, 234, 0.1);
+}
+
+/* ===== ABOUT PLATFORM (ΜΕΣΑ ΣΤΟ ΠΛΑΙΣΙΟ) ===== */
+.about-platform {
+    margin: 0;
+    background: #ffffff;
+    padding: 25px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
+    border: 1px solid rgba(102, 126, 234, 0.15);
+}
+
+.about-platform h2 {
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    color: #333;
+    text-align: center;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #667eea;
+}
+
+.about-platform p {
+    color: #555;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* ===== MENU PREVIEW SECTION ===== */
+.menu-preview-section {
+    max-width: 1000px;
+    margin: 50px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.preview-title {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #667eea;
+}
+
+.preview-description {
+    text-align: center;
+    color: #7f8c8d;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* ===== ROLE PREVIEW SELECTOR ===== */
+.role-preview-selector {
+    margin-bottom: 40px;
+    padding: 25px;
+    background: linear-gradient(135deg, #f5f7ff 0%, #eef1ff 100%);
+    border-radius: 12px;
+    text-align: center;
+    border: 2px solid rgba(102, 126, 234, 0.2);
+}
+
+.role-preview-selector strong {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.preview-role-btn {
+    display: inline-block;
+    margin: 0 10px 15px;
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s;
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    border: 2px solid transparent;
+}
+
+.preview-role-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.preview-role-btn.active {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    border-color: #667eea;
+    transform: scale(1.05);
+}
+
+/* ===== MENU PREVIEW ===== */
+.menu-preview {
+    margin-top: 30px;
+    padding: 25px;
+    background-color: #f8fafc;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+.preview-role-title {
+    color: #2c3e50;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e2e8f0;
+    font-size: 1.5rem;
+}
+
+.preview-role-title strong {
+    color: #667eea;
+}
+
+/* ===== PREVIEW MENU LIST ===== */
+.preview-menu-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 30px 0;
+}
+
+.preview-menu-list li {
+    background-color: #ffffff;
+    margin: 10px 0;
+    padding: 18px 20px;
+    border-radius: 8px;
+    border-left: 5px solid #667eea;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.preview-menu-list li:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== BUTTONS ===== */
+.role-btn {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+    text-align: center;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.role-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+/* ===== SIMPLE BUTTON CONTAINER (Από index.jsp) ===== */
+.simple-btn-container {
+    margin: 30px 0;
+    padding: 0;
+}
+
+.simple-btn-container .role-btn {
+    margin-bottom: 15px;
+}
+
+/* ===== PREVIEW LOGIN BUTTON CONTAINER ===== */
+.preview-login-btn-container {
+    margin: 35px 0;
+    padding: 20px 0;
+    border-top: 2px dashed #cbd5e0;
+    border-bottom: 2px dashed #cbd5e0;
+}
+
+.preview-note {
+    text-align: center;
+    color: #7f8c8d;
+    font-style: italic;
+    margin-top: 25px;
+    padding-top: 15px;
+    font-size: 0.95rem;
+}
+
+.no-preview {
+    text-align: center;
+    color: #7f8c8d;
+    padding: 40px;
+    font-style: italic;
+    background-color: #f8fafc;
+    border-radius: 8px;
+    border: 2px dashed #cbd5e0;
+}
+
+/* ===== FOOTER ===== */
+.site-footer {
+    text-align: center;
+    padding: 20px 0;
+    color: #ffffff;
+    font-size: 0.9rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.site-footer p {
+    font-size: 15px;
+    color: #ecf0f1;
+    margin: 0;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    .logo-area {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .logo-image {
+        height: 35px;
+    }
+
+    .tool-description {
+        font-size: 16px;
+    }
+
+    .main-content {
+        margin: 20px auto;
+        padding: 0 15px;
+    }
+
+    .info-frame-container {
+        padding: 15px;
+        margin: 25px auto;
+    }
+    
+    .info-frame::before {
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 0.75rem;
+        padding: 4px 15px;
+    }
+    
+    .about-platform {
+        padding: 20px;
+    }
+    
+    .about-platform h2 {
+        font-size: 1.5rem;
+    }
+
+    .menu-preview-section {
+        padding: 20px;
+        margin: 30px auto;
+    }
+
+    .preview-title {
+        font-size: 1.5rem;
+    }
+
+    .preview-role-btn {
+        display: block;
+        margin: 10px auto;
+        width: 80%;
+        max-width: 250px;
+    }
+
+    .role-preview-selector {
+        padding: 20px;
+    }
+
+    .preview-menu-list li {
+        padding: 15px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-preview-section {
+        padding: 15px;
+    }
+    
+    .preview-title {
+        font-size: 1.3rem;
+    }
+    
+    .preview-description {
+        font-size: 0.95rem;
+    }
+    
+    .preview-role-title {
+        font-size: 1.2rem;
+    }
+    
+    .preview-login-btn-container {
+        margin: 25px 0;
+        padding: 15px 0;
+    }
+    
+    /* Responsive για το πλαίσιο */
+    .info-frame-container {
+        padding: 10px;
+        margin: 20px auto;
+    }
+    
+    .about-platform {
+        padding: 15px;
+    }
+}
