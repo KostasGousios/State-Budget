@@ -1,10 +1,10 @@
-public class Exoda {
+public class TestExoda {
     private int misthoi;
     private int syntakseis;
     private int loipa;
     private int exodagiaypourgeia;
 
-    public Exoda(int misthoi, int syntakseis, int loipa, int exodagiaypourgeia) {
+    public TestExoda(int misthoi, int syntakseis, int loipa, int exodagiaypourgeia) {
         this.misthoi = misthoi;
         this.syntakseis = syntakseis;
         this.loipa = loipa;

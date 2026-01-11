@@ -1,10 +1,10 @@
-public class Esoda {
+public class TestEsoda {
     private int foroi;
     private int daneia;
     private int loipa;
     private int synolikaesoda;
 
-    public Esoda(int foroi, int daneia, int loipa, KratikoTameio tameio) {
+    public TestEsoda(int foroi, int daneia, int loipa, TestKratikoTameio tameio) {
         this.foroi = foroi;
         this.daneia = daneia;
         this.loipa = loipa;
